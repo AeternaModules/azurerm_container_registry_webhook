@@ -23,8 +23,8 @@ EOT
     resource_group_name = string
     service_uri         = string
     custom_headers      = optional(map(string))
-    scope               = optional(string, "")
-    status              = optional(string, "enabled")
+    scope               = optional(string) # Default: ""
+    status              = optional(string) # Default: "enabled"
     tags                = optional(map(string))
   }))
 }
