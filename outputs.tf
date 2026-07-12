@@ -1,3 +1,7 @@
+output "container_registry_webhooks_id" {
+  description = "Map of id values across all container_registry_webhooks, keyed the same as var.container_registry_webhooks"
+  value       = { for k, v in azurerm_container_registry_webhook.container_registry_webhooks : k => v.id }
+}
 output "container_registry_webhooks_actions" {
   description = "Map of actions values across all container_registry_webhooks, keyed the same as var.container_registry_webhooks"
   value       = { for k, v in azurerm_container_registry_webhook.container_registry_webhooks : k => v.actions }
