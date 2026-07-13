@@ -23,8 +23,8 @@ EOT
     resource_group_name = string
     service_uri         = string
     custom_headers      = optional(map(string))
-    scope               = optional(string) # Default: ""
-    status              = optional(string) # Default: "enabled"
+    scope               = optional(string)
+    status              = optional(string)
     tags                = optional(map(string))
   }))
   # --- Unconfirmed validation candidates, derived from azurerm_container_registry_webhook's provider source ---
